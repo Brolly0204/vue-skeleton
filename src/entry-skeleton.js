@@ -1,9 +1,9 @@
 import Vue from 'vue'
-import SkeletonHome from './skeleton/Skeleton1'
+import Skeleton from './skeleton/Skeleton'
 
 export default new Vue({
   components: {
-    SkeletonHome
+    Skeleton
   },
-  template: `<skeleton-home id="skeleton1" style="display:none" />`
+  template: `<skeleton id="skeleton1" style="display:none" />`
 })

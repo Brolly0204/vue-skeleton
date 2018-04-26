@@ -14,9 +14,16 @@ const portfinder = require('portfinder')
 const HOST = process.env.HOST
 const PORT = process.env.PORT && Number(process.env.PORT)
 
+function resolve(dir) {
+  return path.join(__dirname, '..', dir)
+}
+
 const devWebpackConfig = merge(baseWebpackConfig, {
   module: {
-    rules: utils.styleLoaders({ sourceMap: config.dev.cssSourceMap, usePostCSS: true })
+    rules: utils.styleLoaders({ 
+      sourceMap: config.dev.cssSourceMap, 
+      usePostCSS: true 
+      })
   },
   // cheap-module-eval-source-map is faster for development
   devtool: config.dev.devtool,
@@ -100,8 +107,8 @@ module.exports = new Promise((resolve, reject) => {
         ? utils.createNotifierCallback()
         : undefined
       }))
-
       resolve(devWebpackConfig)
     }
   })
 })
+

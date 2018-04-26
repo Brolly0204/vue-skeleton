@@ -1,5 +1,59 @@
 <template>
   <div>
+    <!-- swipe -->
+    <div class="swiper-container"></div>
+
+    <!-- icon -->
+    <div class="icon-container">
+      <div class="icon-item">
+        <div></div>
+        <h3></h3>
+      </div>
+      <div class="icon-item">
+        <div></div>
+        <h3></h3>
+      </div>
+      <div class="icon-item">
+        <div></div>
+        <h3></h3>
+      </div>
+      <div class="icon-item">
+        <div></div>
+        <h3></h3>
+      </div>
+      <div class="icon-item">
+        <div></div>
+        <h3></h3>
+      </div>
+      <div class="icon-item">
+        <div></div>
+        <h3></h3>
+      </div>
+      <div class="icon-item">
+        <div></div>
+        <h3></h3>
+      </div>
+      <div class="icon-item">
+        <div></div>
+        <h3></h3>
+      </div>
+    </div>
+
+
+    <!-- 推荐板块1 -->
+    <div class="recommend-one">
+      <div class="left"></div>
+      <div class="right">
+        <div class="top"></div>
+        <div class="bottom"></div>
+      </div>
+    </div>
+
+        <!-- 推荐banner -->
+    <div class="reommend-banner">
+      <div class="content"></div>
+    </div>
+
     <div class="timeline-item">
       <div class="animated-background">
         <div class="background-masker header-top"></div>
@@ -10,8 +64,6 @@
         <div class="background-masker subheader-right"></div>
         <div class="background-masker subheader-bottom"></div>
       </div>
-    </div>
-    <div class="timeline-item">
       <div class="animated-background">
         <div class="background-masker header-top"></div>
         <div class="background-masker header-left"></div>
@@ -21,8 +73,6 @@
         <div class="background-masker subheader-right"></div>
         <div class="background-masker subheader-bottom"></div>
       </div>
-    </div>
-    <div class="timeline-item">
       <div class="animated-background">
         <div class="background-masker header-top"></div>
         <div class="background-masker header-left"></div>
@@ -40,16 +90,87 @@
 export default {};
 </script>
 
-<style>
+<style scoped>
+
+.swiper-container {
+  width: 100%;
+  height: 145px;
+  background: linear-gradient(to right, #eeeeee 8%, #eeeeee 18%, #eeeeee 33%);
+}
+
+.icon-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+.icon-container .icon-item {
+  width: 25%;
+  margin-bottom: 7px;
+}
+
+.icon-container .icon-item div {
+  width: 44px;
+  height: 44px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background: linear-gradient(to right, #eeeeee 8%, #eeeeee 18%, #eeeeee 33%);
+}
+
+.icon-container .icon-item h3 {
+  width: 44px;
+  height: 13px;
+  margin: 4px auto 0;
+  background: linear-gradient(to right, #eeeeee 8%, #eeeeee 18%, #eeeeee 33%);
+}
+
+.recommend-one {
+  display: flex;
+  padding: 10px;
+}
+
+.recommend-one .left {
+  width: 220px;
+  height: 160px;
+  margin-right: 7px;
+  background: linear-gradient(to right, #eeeeee 8%, #eeeeee 18%, #eeeeee 33%);
+}
+
+.recommend-one .right {
+  flex: 1;
+}
+
+.recommend-one .right .top,
+.recommend-one .right .bottom {
+  height: 77px;
+  margin-bottom: 6px;
+  background: linear-gradient(to right, #eeeeee 8%, #eeeeee 18%, #eeeeee 33%);
+}
+
+.recommend-one .right .right {
+  margin-bottom: 0;
+}
+
+.reommend-banner {
+  height: 100px;
+  padding: 0 10px 10px;
+  box-sizing: border-box;
+}
+.reommend-banner .content {
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to right, #eeeeee 8%, #eeeeee 18%, #eeeeee 33%);
+}
+
 .timeline-item {
   background: #fff;
-  border: 1px solid;
-  border-color: #e5e6e9 #dfe0e4 #d0d1d5;
-  border-radius: 3px;
+  /* border: 1px solid; */
+  /* border-color: #e5e6e9 #dfe0e4 #d0d1d5; */
+  /* border-radius: 3px; */
   padding: 12px;
-  margin: 0 auto;
+  margin: 10px auto;
   max-width: 472px;
-  min-height: 200px;
+  min-height: 90px;
 }
 
 @keyframes placeHolderShimmer {
@@ -72,6 +193,7 @@ export default {};
   background-size: 800px 104px;
   height: 40px;
   position: relative;
+  margin-bottom: 10px;
 }
 
 .background-masker {
